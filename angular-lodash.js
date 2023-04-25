@@ -60,7 +60,7 @@
 
   // begin register angular-lodash/utils
 
-  _.each(_.methods(_), function(methodName) {
+  _.each(_.functions(_), function(methodName) {
     function register($rootScope) {$rootScope[methodName] = _.bind(_[methodName], _);}
 
     _.each([
